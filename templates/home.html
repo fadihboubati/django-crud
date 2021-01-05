@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block main %}
+{% for menu in object_list%}
+<li>
+{{menu.name}}
+<a href="{%url 'dish_details' menu.pk %}">Details</a>
+<a href="{%url 'update_view' menu.pk %}">Update</a>
+<a href="{%url 'delete_view' menu.pk %}">Delete</a>
+
+</li>
+{% endfor %}
+<h3>you know some one who love food much ?! <a href="{% url 'create_view' %}"> clicke here</a> to create and let us to know him</h3>
+
+{% endblock main %}

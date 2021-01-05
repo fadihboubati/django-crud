@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block main %}
+<form action="" method="POST"> 
+    {% csrf_token %}
+    <h2>Are you sure you want to delet this ? this command cant be undo  !!</h2>
+    <input type="submit" value="Delete">
+</form>
+{% endblock main %}
