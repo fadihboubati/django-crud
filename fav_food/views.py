@@ -33,4 +33,4 @@ class DishUpdateView(UpdateView):
     model = Menu
     # fields = ['user', 'name', 'fav_drink', 'fav_meal', 'eating_frequency_per_day', 'like_spicy']
     fields = '__all__'
-    # here we did not determind where should redirect after submit, so will go to ...
+    # here we did not determind where should redirect after submit, so will go will use get_absolute_url() on the model object if available.
