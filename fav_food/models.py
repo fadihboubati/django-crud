@@ -11,6 +11,7 @@ class Menu (models.Model):
     like_spicy = models.BooleanField()
     def __str__(self):
         return self.name
-    def get_absolute_url (self):
+
+    def get_absolute_url (self): # return to this url for any submit happen if there was no success_url in the view
         return reverse('home')
         #return reverse('detail', args=[str(self.id)])
